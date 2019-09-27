@@ -11,11 +11,5 @@ import org.springframework.data.jpa.repository.JpaRepository;
  * @date 2019/9/26 19:22
  */
 public interface TypeRepository extends JpaRepository<Type,Long> {
-
-    /**
-     * 查询
-     * @param name
-     * @return
-     */
     Type findByName(String name);
 }
