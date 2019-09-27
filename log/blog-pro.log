@@ -1,0 +1,6 @@
+2019-09-23 22:50:19.991  INFO 15780 --- [restartedMain] com.yyg.BlogApplication             : Starting BlogApplication on DESKTOP-8HEDKTQ with PID 15780 (started by 杨雨光 in D:\1.项目实战\07.个人博客\blog_springboot)
+2019-09-23 22:50:19.995  INFO 15780 --- [restartedMain] com.yyg.BlogApplication             : The following profiles are active: pro
+2019-09-23 22:50:23.113  WARN 15780 --- [restartedMain] com.zaxxer.hikari.util.DriverDataSource  : Registered driver with driverClassName=com.mysql.jdbc.Driver was not found, trying direct instantiation.
+2019-09-23 22:50:24.645  WARN 15780 --- [restartedMain] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-09-23 22:50:24.779  WARN 15780 --- [restartedMain] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2019-09-23 22:50:25.102  INFO 15780 --- [restartedMain] com.yyg.BlogApplication             : Started BlogApplication in 6.09 seconds (JVM running for 8.154)
