@@ -17,6 +17,13 @@ public interface TypeService {
 
     List<Type> listType();
 
+    /**
+     * 分类博客数量从大到小
+     * @param size
+     * @return
+     */
+    List<Type> listTypeTop(Integer size);
+
     Type updateType(Long id,Type type) throws NotFoundException;
 
     void deleteType(Long id);

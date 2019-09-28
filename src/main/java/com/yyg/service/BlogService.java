@@ -21,6 +21,11 @@ public interface BlogService {
 
     Page<Blog> listBlog(String query,Pageable pageable);
 
+    /**
+     * 首页最新推荐列表
+     * @param size
+     * @return
+     */
     List<Blog> listRecommendBlogTop(Integer size);
 
     Map<String,List<Blog>> archiveBlog();

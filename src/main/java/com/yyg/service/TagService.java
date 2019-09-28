@@ -24,6 +24,11 @@ public interface TagService {
 
     List<Tag> listTag();
 
+    /**
+     * 首页博客标签从大到小排序
+     * @param size
+     * @return
+     */
     List<Tag> listTagTop(Integer size);
 
     List<Tag> listTag(String ids);

@@ -58,7 +58,7 @@ public class Blog {
     @Transient
     private String tagIds;
 
-    private String description;
+    private String description;//博客描述
 
     public void init() {
         this.tagIds = tagsToIds(this.getTags());
