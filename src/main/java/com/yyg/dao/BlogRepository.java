@@ -20,10 +20,18 @@ import java.util.List;
  */
 public interface BlogRepository extends JpaRepository<Blog, Long>, JpaSpecificationExecutor<Blog> {
 
-    @Query("select b from Blog b where b.recommend = true")
+    /**
+     * 已发布博客
+     * @param pageable
+     * @return
+     */
+    @Query("select b from Blog b where b.published = true")
+    Page<Blog> findPublishedAll(Pageable pageable);
+
+    @Query("select b from Blog b where b.recommend = true and b.published = true")
     List<Blog> findTop(Pageable pageable);
 
-    @Query("select b from Blog b where b.title like ?1 or b.content like ?1")
+    @Query("select b from Blog b where b.published = true and b.title like ?1 or b.description like ?1")
     Page<Blog> findByQuery(String query, Pageable pageable);
 
 
