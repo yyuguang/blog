@@ -33,7 +33,7 @@ public interface TagService {
 
     List<Tag> listTag(String ids);
 
-    Tag updateTag(Long id,Tag tag) throws NotFoundException;
+    Tag updateTag(Long id,Tag tag);
 
     void deleteTag(Long id);
 

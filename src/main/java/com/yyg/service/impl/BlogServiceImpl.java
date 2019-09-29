@@ -5,6 +5,7 @@ import com.yyg.dao.BlogRepository;
 import com.yyg.po.Blog;
 import com.yyg.po.Type;
 import com.yyg.service.BlogService;
+import com.yyg.util.MarkDownUtils;
 import com.yyg.util.MyBeanUtils;
 import com.yyg.vo.BlogQuery;
 import org.springframework.beans.BeanUtils;
@@ -43,17 +44,17 @@ public class BlogServiceImpl implements BlogService {
     @Transactional
     @Override
     public Blog getAndConvert(Long id) {
-//        Blog blog = blogRepository.getOne(id);
-//        if (blog == null) {
-//            throw new NotFoundException("该博客不存在");
-//        }
-//        Blog b = new Blog();
-//        BeanUtils.copyProperties(blog,b);
-//        String content = b.getContent();
-//        b.setContent(MarkdownUtils.markdownToHtmlExtensions(content));
-//
-//        blogRepository.updateViews(id);
-        return null;
+        Blog blog = blogRepository.getOne(id);
+        if (blog == null) {
+            throw new NotFoundException("该博客不存在");
+        }
+        Blog b = new Blog();
+        BeanUtils.copyProperties(blog,b);
+        String content = b.getContent();
+        b.setContent(MarkDownUtils.markdownToHtmlExtensions(content));
+
+        blogRepository.updateViews(id);
+        return b;
     }
 
     @Override

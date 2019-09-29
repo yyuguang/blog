@@ -24,7 +24,7 @@ public interface TypeService {
      */
     List<Type> listTypeTop(Integer size);
 
-    Type updateType(Long id,Type type) throws NotFoundException;
+    Type updateType(Long id,Type type);
 
     void deleteType(Long id);
 

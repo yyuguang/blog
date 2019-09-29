@@ -1,9 +1,9 @@
 package com.yyg.service.impl;
 
+import com.yyg.NotFoundException;
 import com.yyg.dao.TypeRepository;
 import com.yyg.po.Type;
 import com.yyg.service.TypeService;
-import javassist.NotFoundException;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
@@ -61,7 +61,7 @@ public class TypeServiceImpl implements TypeService {
 
     @Transactional
     @Override
-    public Type updateType(Long id, Type type) throws NotFoundException {
+    public Type updateType(Long id, Type type){
         Type t = typeRepository.getOne(id);
         if (t == null) {
             throw new NotFoundException("不存在该条记录");

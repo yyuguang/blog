@@ -17,7 +17,7 @@
 - [waypoints 滚动侦测](http://imakewebthings.com/waypoints/)
 - [jquery.scrollTo 平滑滚动](https://github.com/flesler/jquery.scrollTo)
 - [qrcode.js 二维码生成](https://davidshimjs.github.io/qrcodejs/)
-
+- [MarkDown 转 HTML](https://github.com/atlassian/commonmark-java)
 ---
 
 #### 后端

@@ -82,7 +82,7 @@ public class TagServiceImpl implements TagService {
 
     @Transactional
     @Override
-    public Tag updateTag(Long id, Tag tag) throws NotFoundException {
+    public Tag updateTag(Long id, Tag tag){
         Tag t = tagRepository.getOne(id);
         if (t == null) {
             throw new NotFoundException("不存在该条记录");
