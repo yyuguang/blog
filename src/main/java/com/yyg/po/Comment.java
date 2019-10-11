@@ -39,5 +39,5 @@ public class Comment {
     @ManyToOne
     private Comment parentComment;
 
-    private boolean adminComment;
+    private boolean adminComment;//回复是否为博主
 }

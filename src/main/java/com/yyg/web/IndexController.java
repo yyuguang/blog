@@ -48,31 +48,17 @@ public class IndexController {
         return "blog";
     }
 
-    @GetMapping("/about")
-    public String about() {
-        return "about";
-    }
-
-    @GetMapping("/archives")
-    public String archives() {
-        return "archives";
-    }
-
-    @GetMapping("/tags")
-    public String tags() {
-        return "tags";
-    }
-
-    @GetMapping("/types")
-    public String types() {
-        return "types";
-    }
-
     @PostMapping("/search")
     public String search(@PageableDefault(size = 8, sort = {"updateTime"}, direction = Sort.Direction.DESC) Pageable pageable,
                          @RequestParam String query, Model model) {
         model.addAttribute("page", blogService.listBlog("%"+query+"%",pageable));
         model.addAttribute("query",query);
         return "search";
+    }
+
+    @GetMapping("/footer/newBlog")
+    public String newBlogs(Model model) {
+        model.addAttribute("newBlogs", blogService.listRecommendBlogTop(3));
+        return "_fragments :: newBlogList";
     }
 }
